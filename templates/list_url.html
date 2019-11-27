@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}List of shorten urls{% endblock %}
+{% block body %}
+  <h2>List of shorten urls in db</h2>
+  <ul>
+      {% for short_id, url in list_urls %}
+      <li><a href="/{{ short_id }}">{{ url }}</a></li>
+      {% endfor %}
+  </ul>
+{% endblock %}
